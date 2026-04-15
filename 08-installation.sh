@@ -11,7 +11,7 @@ fi
 
 #installing nginx, mysql and nodejs using yum and dnf package manager
 echo "Installing Ngnix"
-yum install ngnix -y
+yum install nginx -y
 #checking the exit status of the previous command and printing the appropriate message
 if [ $? -ne 0 ]; then
 	echo "Installing Nginx ... FAILURE"
