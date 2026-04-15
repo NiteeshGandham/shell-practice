@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#varibale declarition
+#variable declaration
 
-Person1="John"
+person1="John"
 person2="Doe"
 #printing the person1 and person2 variable
 echo "name of person1 is ::" $person1
