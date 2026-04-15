@@ -4,6 +4,7 @@
 
 startdate=$(date +%s)
 echo "Script started at: $startdate"
+sleep 5 # Simulating some work by sleeping for 5 seconds    
 
 enddate=$(date +%s)
 echo "Script ended at: $enddate"
