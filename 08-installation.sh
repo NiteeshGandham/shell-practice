@@ -13,8 +13,8 @@ fi
 echo "Installing Ngnix"
 yum install ngnix -y
 #checking the exit status of the previous command and printing the appropriate message
-if [ $? -ne 0 ]
-	 echo "Installing Nginx ... FAILURE"
+if [ $? -ne 0 ]; then
+	echo "Installing Nginx ... FAILURE"
     exit 1
 else
     echo "Installing Nginx ... SUCCESS"
