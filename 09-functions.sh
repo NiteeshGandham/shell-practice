@@ -23,12 +23,11 @@ validate()
 #installing nginx, mysql and nodejs using yum and dnf package manager
 yum install nginx -y
 #checking the exit status of the previous command and printing the appropriate message
-validate $? "Nginx" "nginx"
+validate $? "NGINX"
 
 
 yum install mysql -y
-validate $? "MySQL" "mysql"
+validate $? "MySQL"
 
 dnf install nodejs -y
-echo "Installing nodejs"
-validate $? "nodejs" "nodejs"
+validate $? "nodejs"
