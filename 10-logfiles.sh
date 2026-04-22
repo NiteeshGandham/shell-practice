@@ -30,3 +30,5 @@ validate $? nginx
 
 dnf install mysql -y &>> $LOG_FILE
 validate $? mysql
+
+echo "Installation of nginx and mysql is completed."
