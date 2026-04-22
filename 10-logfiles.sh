@@ -18,14 +18,11 @@ fi
 validate(){
 	if [ $1 -ne 0 ]; then
 		echo "$2 installation is Failure"
-        exit 1
+		exit 1
 	else
 		echo "$2 installation is Successful"
 	fi
 }
-
-
-
 
 #dnf install nginx and mysql and redirecting the output to log file
 dnf install nginx -y &>> $LOG_FILE
