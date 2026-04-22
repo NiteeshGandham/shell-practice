@@ -20,6 +20,10 @@ validate(){
 	fi
 }
 
+#creating log folder if not exist
+mkdir -p $LOG_FOLDER
+
+
 #dnf install nginx and mysql and redirecting the output to log file
 dnf install nginx -y &>> $LOG_FILE
 validate $? nginx
