@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #defining user id variable
-userid="id -u"
+userid=(id -u)
 
 #defining log folder and log file variable
 LOG_FOLDER="/var/log/shell-script"
@@ -13,7 +13,7 @@ if [ $userid -ne 0 ];then
 fi
 
 validate(){
-	if [$1 -ne 0 ];then
+	if [ $1 -ne 0 ];then
 		echo "$2 installation is Failure"
 	else
 		echo "$2 installations is Successful"
