@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #defining the user id variable
-userid=(id -u)
+userid=$(id -u)
 
 #if condition to check if the user is root or not
-if [ $userid -nq 0 ]; then
+if [ $userid -ne 0 ]; then
 	echo "Please login with Root user"
 	exit 1
 fi

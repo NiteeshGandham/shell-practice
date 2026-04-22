@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #defining user id variable
-userid=(id -u)
+userid=$(id -u)
 
 #defining log folder and log file variable
 LOG_FOLDER="/var/log/shell-script"
