@@ -7,21 +7,24 @@ userid=$(id -u)
 LOG_FOLDER="/var/log/shell-script"
 LOG_FILE="/var/log/shell-script/$0.log"
 
-if [ $userid -ne 0 ];then
+#creating log folder if not exist
+mkdir -p $LOG_FOLDER
+
+if [ $userid -ne 0 ]; then
 	echo "Please login with root user.."
 	exit 1
 fi
 
 validate(){
-	if [ $1 -ne 0 ];then
+	if [ $1 -ne 0 ]; then
 		echo "$2 installation is Failure"
+        exit 1
 	else
-		echo "$2 installations is Successful"
+		echo "$2 installation is Successful"
 	fi
 }
 
-#creating log folder if not exist
-mkdir -p $LOG_FOLDER
+
 
 
 #dnf install nginx and mysql and redirecting the output to log file
