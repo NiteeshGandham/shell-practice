@@ -1,11 +1,10 @@
 #!/bin/bash
 
 #creating log folder for the script
-LOG_FOLDER=VAR/LOG/SHELL-SCRIPT
+LOG_FOLDER=/var/log/shellscript
 
 #creating log file for the script
-LOG_FILE=VAR/LOG/SHELLSCRIPT/$0.log
-
+LOG_FILE=/var/log/shellscript/$0.log
 #user with root privileges can run the script
 USER=$(id -u)
 
@@ -23,7 +22,7 @@ mkdir -p $LOG_FOLDER
 validate(){
 	if [ $1 -ne 0 ];then
 		echo " $2 installation --------FALURE" | tee -a $LOG_FILE
-		exit1
+		exit 1
 	else
 		echo "$2 installation ---------SUCCESS"
 	fi
