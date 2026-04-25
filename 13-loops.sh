@@ -21,6 +21,8 @@ validate(){
 	fi
 }
 
+#$@ is a special variable in shell scripting that means:
+# “all the arguments passed to the script”
 
 for package in "$@"
 do 
