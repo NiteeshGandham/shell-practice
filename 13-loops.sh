@@ -5,12 +5,12 @@ LOG_FILE=/var/log/shellscript/$0.log
 
 USER=$(id -u)
 
-if [ $USER -ne 0 ];then
+if [ "$USER" -ne 0 ];then
 	echo "Please log in with root user"
 	exit 1
 fi
 
-mkdir -p $LOG_FILE
+mkdir -p "$LOG_FOLDER"
 
 validate(){
 	if [ $1 -ne 0 ];then
@@ -22,8 +22,8 @@ validate(){
 }
 
 
-for package in $@
+for package in "$@"
 do 
-	dnf install $package -y | tee -a $LOG_FILE
+	dnf install "$package" -y | tee -a "$LOG_FILE"
 	validate $? "$package"
 done
