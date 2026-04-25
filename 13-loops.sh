@@ -24,6 +24,6 @@ validate(){
 
 for package in "$@"
 do 
-	dnf install "$package" -y &>> $log_file
+	dnf install "$package" -y &>> "$LOG_FILE"
 	validate $? "$package"
 done
