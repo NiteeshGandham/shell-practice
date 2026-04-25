@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LOG_FOLDER=/var/log/shellscript
-LOG_FILE=/var/log/shellscript/$0.log
+LOG_FILE=/var/log/shellscript/$(basename $0).log
 
 USER=$(id -u)
 
@@ -24,6 +24,6 @@ validate(){
 
 for package in "$@"
 do 
-	dnf install "$package" -y | tee -a "$LOG_FILE"
+	dnf install "$package" -y &>> $log_file
 	validate $? "$package"
 done
