@@ -10,7 +10,7 @@ if [ $USER -ne 0 ];then
 	exit 1
 fi
 
-mkdir -p $LOGFILE
+mkdir -p $LOG_FILE
 
 validate(){
 	if [ $1 -ne 0 ];then
@@ -24,6 +24,6 @@ validate(){
 
 for package in $@
 do 
-	dnf install $package -y | tee -a $LOGFILE
+	dnf install $package -y | tee -a $LOG_FILE
 	validate $? "$package"
 done
