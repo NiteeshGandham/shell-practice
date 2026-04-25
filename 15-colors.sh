@@ -3,7 +3,7 @@
 
 R="\e[31m"
 G="\e[32m"
-B="\e[33m"
+Y="\e[33m"
 N="\e[34m"
 
-echo " "$R" Hi" $N", "$G" This is Niteesh "$N". "$B" Welcome to Devops "$N" "
+echo -e " $R Hi $N, $G This is Niteesh $N. $Y Welcome to Devops $N "
